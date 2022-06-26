@@ -131,4 +131,15 @@ CREATE TABLE extensions (
     UNIQUE (id)
 ) engine=InnoDB;
 
+create table if not exists usuario(
+    id integer unsigned not null auto_increment,
+    usuario varchar(255) not null,
+    senha_usuario varchar(255) not null,
+    nome varchar(255) not null,
+    email varchar(255) not null,
+
+    primary key (id)
+   
+) engine=InnoDB;
+
 
