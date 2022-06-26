@@ -119,5 +119,16 @@ CREATE TABLE sippeers (
     UNIQUE (name)
 ) engine=InnoDB;
 
+CREATE TABLE extensions (
+    id BIGINT NOT NULL AUTO_INCREMENT, 
+    context VARCHAR(40) NOT NULL, 
+    exten VARCHAR(40) NOT NULL, 
+    priority INTEGER NOT NULL, 
+    app VARCHAR(40) NOT NULL, 
+    appdata VARCHAR(256) NOT NULL, 
+    PRIMARY KEY (id), 
+    UNIQUE (context, exten, priority), 
+    UNIQUE (id)
+) engine=InnoDB;
 
 
